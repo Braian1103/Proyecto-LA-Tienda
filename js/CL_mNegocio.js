@@ -3,12 +3,14 @@ export default class CL_mNegocio {
         this.acVenta = 0;
         this.ventaMayor = 0;
         this.articuloMayor = "";
+        this.arti = 0;
     }
 
     procesarCliente(cliente) {
         this.acVenta += cliente.montoPagar();
-        if (cliente.cantidad > this.ventaMayor) {
-            this.ventaMayor = cliente.cantidad;
+        this.arti += cliente.producto;
+        this.arti++
+        if (this.arti > 1) {
             this.articuloMayor = cliente.producto;
         }
     }
